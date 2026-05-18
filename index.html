@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineering Portfolio | Your Name</title>
+  <title>Your Name — Engineering Portfolio</title>
   <style>
     :root {
-      --bg: #f4f1ea;
-      --text: #1d1d1b;
-      --muted: #6b665c;
-      --card: #fffaf0;
-      --accent: #243b53;
-      --accent-2: #c87f3a;
-      --line: rgba(29, 29, 27, 0.14);
+      --bg: #f6f4ef;
+      --text: #101010;
+      --muted: #74716b;
+      --line: #d8d3c8;
+      --card: #ffffff;
+      --accent: #ff5a1f;
     }
 
     * {
@@ -21,13 +20,14 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Inter, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(200, 127, 58, 0.18), transparent 34%),
-        linear-gradient(135deg, #f8f4eb 0%, #ece6d9 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
     }
 
     a {
@@ -35,457 +35,463 @@
       text-decoration: none;
     }
 
-    .page {
-      width: min(1120px, 92%);
+    .wrap {
+      width: min(1500px, 94vw);
       margin: 0 auto;
-      padding: 32px 0 64px;
     }
 
-    nav {
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      padding: 26px 0 18px;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(246, 244, 239, 0.92);
+      backdrop-filter: blur(12px);
+      z-index: 10;
+    }
+
+    .brand {
+      font-size: clamp(28px, 6vw, 86px);
+      line-height: 0.82;
+      letter-spacing: -0.08em;
+      font-weight: 900;
+      text-transform: uppercase;
+      max-width: 860px;
+    }
+
+    .nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 72px;
-      font-size: 14px;
-    }
-
-    .logo {
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      color: var(--muted);
+      gap: 18px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      padding-top: 7px;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 48px;
-      align-items: center;
-      margin-bottom: 88px;
-    }
-
-    .eyebrow {
-      color: var(--accent-2);
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: clamp(44px, 8vw, 86px);
-      line-height: 0.95;
-      letter-spacing: -0.07em;
-      margin-bottom: 24px;
-    }
-
-    .hero p {
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 18px;
-      margin-bottom: 28px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      border: 1px solid var(--line);
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      background: rgba(255, 250, 240, 0.7);
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      background: white;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-
-    .visual-card {
-      position: relative;
-      min-height: 360px;
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.6), rgba(255,250,240,0.7));
-      box-shadow: 0 24px 80px rgba(36, 59, 83, 0.14);
-      overflow: hidden;
-      padding: 26px;
-    }
-
-    .grid-lines {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(var(--line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--line) 1px, transparent 1px);
-      background-size: 32px 32px;
-      opacity: 0.5;
-    }
-
-    .diagram {
-      position: relative;
-      height: 100%;
-      min-height: 300px;
-    }
-
-    .node {
-      position: absolute;
-      padding: 12px 14px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      font-size: 13px;
-      font-weight: 800;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .n1 { top: 20px; left: 20px; }
-    .n2 { top: 116px; right: 18px; }
-    .n3 { bottom: 52px; left: 54px; }
-    .n4 { bottom: 18px; right: 48px; }
-
-    .ring {
-      position: absolute;
-      width: 170px;
-      height: 170px;
-      border: 18px solid rgba(36, 59, 83, 0.12);
-      border-top-color: var(--accent-2);
-      border-radius: 50%;
-      top: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    section {
-      margin-bottom: 82px;
-    }
-
-    .section-title {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: end;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      padding: 42px 0 70px;
       border-bottom: 1px solid var(--line);
-      padding-bottom: 16px;
-      margin-bottom: 24px;
     }
 
-    h2 {
-      font-size: clamp(28px, 4vw, 46px);
-      letter-spacing: -0.05em;
-      line-height: 1;
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 92px);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+      font-weight: 900;
+      max-width: 980px;
     }
 
-    .section-title p {
-      color: var(--muted);
-      max-width: 420px;
-      font-size: 15px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .project-card {
-      background: rgba(255, 250, 240, 0.78);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 22px;
-      min-height: 280px;
+    .intro {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 40px;
+      min-height: 320px;
     }
 
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 50px rgba(36, 59, 83, 0.12);
+    .intro p {
+      font-size: clamp(18px, 2vw, 28px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--text);
     }
 
-    .project-card h3 {
-      font-size: 23px;
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-      margin-bottom: 12px;
-    }
-
-    .project-card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 22px;
-    }
-
-    .tag {
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--accent);
-      background: rgba(36, 59, 83, 0.08);
-      padding: 6px 9px;
-      border-radius: 999px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 24px;
-    }
-
-    .panel {
-      background: rgba(255, 250, 240, 0.72);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 26px;
-    }
-
-    .panel p {
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .skills {
+    .meta {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
     }
 
-    .skill {
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 10px;
-      font-weight: 700;
+    .meta div {
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
     }
 
-    footer {
+    .section-head {
       display: flex;
       justify-content: space-between;
-      gap: 24px;
-      border-top: 1px solid var(--line);
-      padding-top: 24px;
+      align-items: end;
+      gap: 20px;
+      padding: 28px 0 18px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(26px, 5vw, 64px);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+      text-transform: uppercase;
+    }
+
+    .section-head p {
+      max-width: 380px;
       color: var(--muted);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 20px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .chip.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-bottom: 72px;
+    }
+
+    .project {
+      min-height: 430px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    .thumb {
+      height: 250px;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(16,16,16,0.08) 1px, transparent 1px),
+        linear-gradient(rgba(16,16,16,0.08) 1px, transparent 1px),
+        #ebe7dd;
+      background-size: 22px 22px;
+    }
+
+    .thumb::before {
+      content: "";
+      position: absolute;
+      inset: 26px;
+      border: 2px solid var(--text);
+      transform: rotate(-4deg);
+    }
+
+    .thumb::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border: 18px solid var(--accent);
+      border-radius: 50%;
+      right: 30px;
+      bottom: 26px;
+      mix-blend-mode: multiply;
+    }
+
+    .project:nth-child(2) .thumb::before {
+      border-radius: 999px;
+      transform: rotate(0deg);
+    }
+
+    .project:nth-child(3) .thumb::before {
+      clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      background: rgba(255, 90, 31, 0.09);
+    }
+
+    .project:nth-child(4) .thumb::after {
+      width: 130px;
+      height: 34px;
+      border-radius: 0;
+      border-width: 12px;
+    }
+
+    .project:nth-child(5) .thumb::before {
+      transform: rotate(8deg);
+      border-style: dashed;
+    }
+
+    .project:nth-child(6) .thumb::after {
+      left: 30px;
+      right: auto;
+    }
+
+    .project-body {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      gap: 22px;
+    }
+
+    .project-title {
+      font-size: 25px;
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .project p {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.28;
       font-size: 14px;
     }
 
-    @media (max-width: 850px) {
+    .project-foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 0 72px;
+    }
+
+    .about-card {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .about-card h3 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 15px;
+    }
+
+    .about-card p,
+    .about-card li {
+      font-size: clamp(18px, 2.2vw, 32px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      list-style: none;
+    }
+
+    .about-card li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 20px 0 40px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 1100px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      header,
       .hero,
-      .about-grid {
+      .about {
         grid-template-columns: 1fr;
       }
 
-      .projects {
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .grid {
         grid-template-columns: 1fr;
       }
 
-      nav,
-      footer,
-      .section-title {
-        align-items: flex-start;
+      .section-head,
+      footer {
         flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <nav>
-      <a href="#" class="logo">YOUR NAME / ENGINEERING</a>
-      <div class="nav-links">
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">Your Name<br>Engineering</a>
+      <nav class="nav">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="mailto:youremail@example.com">Contact</a>
-      </div>
-    </nav>
+        <a href="resume.pdf">Resume</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </nav>
+    </header>
 
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Mechanical Engineering Portfolio</div>
-        <h1>Building systems that move, cool, sense, and survive.</h1>
-        <p>
-          I am a mechanical engineering student focused on vehicle systems, robotics,
-          thermal design, CAD, simulation, and hands-on fabrication. This portfolio
-          highlights selected projects, design decisions, failures, and results.
-        </p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn" href="resume.pdf">Resume</a>
-          <a class="btn" href="https://github.com/yourusername">GitHub</a>
-          <a class="btn" href="https://linkedin.com/in/yourusername">LinkedIn</a>
-        </div>
-      </div>
-
-      <div class="visual-card" aria-label="Engineering diagram graphic">
-        <div class="grid-lines"></div>
-        <div class="diagram">
-          <div class="ring"></div>
-          <div class="node n1">CAD</div>
-          <div class="node n2">Thermal</div>
-          <div class="node n3">Testing</div>
-          <div class="node n4">Iteration</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="section-title">
-        <h2>Selected Projects</h2>
-        <p>Each project focuses on the engineering problem, constraints, technical process, and what I learned through iteration.</p>
-      </div>
-
-      <div class="projects">
-        <article class="project-card">
-          <div>
-            <h3>Formula SAE Cooling Architecture</h3>
-            <p>
-              Developed a radiator and sidepod packaging concept for a race car using heat rejection estimates,
-              airflow constraints, and manufacturability tradeoffs.
-            </p>
-          </div>
-          <div class="tags">
-            <span class="tag">FSAE</span>
-            <span class="tag">Thermal</span>
-            <span class="tag">MATLAB</span>
-            <span class="tag">CAD</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <h3>Robotics Simulation Workflow</h3>
-            <p>
-              Built and tested simulation tools to evaluate robot behavior, performance limits, and system reliability
-              before physical deployment.
-            </p>
-          </div>
-          <div class="tags">
-            <span class="tag">Robotics</span>
-            <span class="tag">Python</span>
-            <span class="tag">Simulation</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <h3>Engine Rebuild & Diagnostics</h3>
-            <p>
-              Hands-on mechanical work involving teardown, inspection, part identification, troubleshooting,
-              and reassembly of internal combustion engine components.
-            </p>
-          </div>
-          <div class="tags">
-            <span class="tag">Engines</span>
-            <span class="tag">Diagnostics</span>
-            <span class="tag">Hands-on</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <h3>CAD Design Iteration</h3>
-            <p>
-              Designed mechanical components with attention to part count, manufacturability, load paths,
-              assembly order, and realistic constraints.
-            </p>
-          </div>
-          <div class="tags">
-            <span class="tag">SolidWorks</span>
-            <span class="tag">DFM</span>
-            <span class="tag">Prototyping</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <h3>Thermal Modeling Tools</h3>
-            <p>
-              Used MATLAB and engineering assumptions to estimate heat transfer, compare configurations,
-              and identify what needed physical validation.
-            </p>
-          </div>
-          <div class="tags">
-            <span class="tag">MATLAB</span>
-            <span class="tag">Heat Transfer</span>
-            <span class="tag">Analysis</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <h3>Fabrication & Testing</h3>
-            <p>
-              Built and modified physical parts, documented failures, and used testing feedback to improve
-              design choices and assembly methods.
-            </p>
-          </div>
-          <div class="tags">
-            <span class="tag">Fabrication</span>
-            <span class="tag">Testing</span>
-            <span class="tag">Iteration</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="section-title">
-        <h2>About</h2>
-        <p>A short summary of how I work and the tools I use.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="panel">
+    <main>
+      <section class="hero">
+        <h1>Mechanical design, vehicle systems, robotics, thermal analysis, and hands-on testing.</h1>
+        <div class="intro">
           <p>
-            I like projects where mechanical design meets real constraints: heat, vibration,
-            packaging, cost, assembly, and reliability. My goal is to become the kind of engineer
-            who can move between analysis, CAD, testing, and physical problem-solving.
+            I am a mechanical engineering student interested in building practical systems — from CAD and simulation
+            to fabrication, testing, debugging, and iteration.
           </p>
+          <div class="meta">
+            <div>Rice University</div>
+            <div>Mechanical Engineering</div>
+            <div>Formula SAE / Robotics</div>
+            <div>CAD · MATLAB · Python</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <h2>Selected Work</h2>
+          <p>Project notes focused on constraints, process, failures, results, and what I would improve next.</p>
+        </div>
+
+        <div class="filters">
+          <span class="chip active">All</span>
+          <span class="chip">CAD</span>
+          <span class="chip">Thermal</span>
+          <span class="chip">Robotics</span>
+          <span class="chip">Fabrication</span>
+          <span class="chip">Code</span>
+        </div>
+
+        <div class="grid">
+          <article class="project">
+            <div class="thumb"></div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">FSAE Cooling Architecture</h3>
+                <p>Radiator sizing, sidepod packaging, heat rejection estimates, airflow constraints, and manufacturability tradeoffs.</p>
+              </div>
+              <div class="project-foot"><span>Thermal / Vehicle</span><span>2026</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb"></div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">Robotics Simulation Workflow</h3>
+                <p>Simulation tools for testing robot behavior, throughput, and reliability before physical deployment.</p>
+              </div>
+              <div class="project-foot"><span>Robotics / Code</span><span>2026</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb"></div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">Engine Rebuild & Diagnostics</h3>
+                <p>Teardown, inspection, troubleshooting, reassembly, and documentation of internal combustion engine components.</p>
+              </div>
+              <div class="project-foot"><span>Mechanical</span><span>2025</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb"></div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">CAD Design Iteration</h3>
+                <p>Mechanical components designed around assembly order, load paths, manufacturability, and realistic constraints.</p>
+              </div>
+              <div class="project-foot"><span>CAD / DFM</span><span>2025</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb"></div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">Thermal Modeling Tools</h3>
+                <p>MATLAB-based calculations to compare system configurations and identify assumptions requiring physical validation.</p>
+              </div>
+              <div class="project-foot"><span>MATLAB</span><span>2026</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb"></div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">Fabrication & Testing</h3>
+                <p>Physical prototypes, failed versions, testing feedback, and design changes based on real-world behavior.</p>
+              </div>
+              <div class="project-foot"><span>Build / Test</span><span>2025</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="about-card">
+          <h3>How I Work</h3>
           <p>
-            I am especially interested in vehicle systems, robotics, thermal systems, manufacturing,
-            and electromechanical design.
+            I like engineering problems with real constraints: heat, vibration, weight, packaging, cost, assembly,
+            reliability, and testability. I try to show not just the final design, but the decisions behind it.
           </p>
         </div>
-
-        <div class="panel">
-          <div class="skills">
-            <div class="skill">SolidWorks / CAD</div>
-            <div class="skill">MATLAB</div>
-            <div class="skill">Python</div>
-            <div class="skill">Thermal Analysis</div>
-            <div class="skill">Formula SAE</div>
-            <div class="skill">Robotics</div>
-            <div class="skill">Fabrication</div>
-            <div class="skill">Testing & Debugging</div>
-          </div>
+        <div class="about-card">
+          <h3>Tools / Interests</h3>
+          <ul>
+            <li>SolidWorks / CAD</li>
+            <li>MATLAB / Python</li>
+            <li>Thermal systems</li>
+            <li>Robotics simulation</li>
+            <li>Formula SAE</li>
+            <li>Fabrication and testing</li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <div>© 2026 Your Name</div>
-      <div>youremail@example.com · github.com/yourusername</div>
+      <div>GitHub · LinkedIn · Email</div>
     </footer>
-  </main>
+  </div>
 </body>
-</html>
+</
