@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atticus Rothschild — Engineering Portfolio</title>
+  <title>Your Name — Engineering Portfolio</title>
   <style>
     :root {
       --bg: #f6f4ef;
       --text: #101010;
-      --muted: #74716b;
-      --line: #d8d3c8;
-      --card: #ffffff;
+      --muted: #716d66;
+      --line: #d6d0c5;
+      --card: #fffdf8;
       --accent: #ff5a1f;
+      --dark: #111111;
     }
 
     * {
@@ -28,6 +29,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
+      overflow-x: hidden;
     }
 
     a {
@@ -51,11 +53,11 @@
       top: 0;
       background: rgba(246, 244, 239, 0.92);
       backdrop-filter: blur(12px);
-      z-index: 10;
+      z-index: 20;
     }
 
     .brand {
-      font-size: clamp(28px, 6vw, 86px);
+      font-size: clamp(28px, 6vw, 82px);
       line-height: 0.82;
       letter-spacing: -0.08em;
       font-weight: 900;
@@ -77,7 +79,7 @@
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 40px;
-      padding: 42px 0 70px;
+      padding: 42px 0 56px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -94,14 +96,13 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 40px;
-      min-height: 320px;
+      min-height: 300px;
     }
 
     .intro p {
       font-size: clamp(18px, 2vw, 28px);
       line-height: 1.08;
       letter-spacing: -0.035em;
-      color: var(--text);
     }
 
     .meta {
@@ -124,168 +125,260 @@
       justify-content: space-between;
       align-items: end;
       gap: 20px;
-      padding: 28px 0 18px;
+      padding: 30px 0 8px;
     }
 
     .section-head h2 {
-      font-size: clamp(26px, 5vw, 64px);
+      font-size: clamp(28px, 5vw, 72px);
       line-height: 0.9;
       letter-spacing: -0.065em;
       text-transform: uppercase;
     }
 
     .section-head p {
-      max-width: 380px;
+      max-width: 450px;
       color: var(--muted);
       font-size: 15px;
       line-height: 1.35;
     }
 
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding-bottom: 20px;
+    /* PROJECT CAROUSEL SHELL */
+    .carousel-section {
+      padding-bottom: 76px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .chip {
-      border: 1px solid var(--line);
-      padding: 8px 11px;
-      border-radius: 999px;
-      font-size: 12px;
+    .carousel-note {
+      color: var(--muted);
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      font-weight: 700;
-      color: var(--muted);
+      margin: 14px 0 20px;
     }
 
-    .chip.active {
-      background: var(--text);
-      color: var(--bg);
-      border-color: var(--text);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      padding-bottom: 72px;
-    }
-
-    .project {
-      min-height: 430px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
-    }
-
-    .thumb {
-      height: 250px;
-      border-bottom: 1px solid var(--line);
-      position: relative;
+    .carousel-window {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
       overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(16,16,16,0.08) 1px, transparent 1px),
-        linear-gradient(rgba(16,16,16,0.08) 1px, transparent 1px),
-        #ebe7dd;
-      background-size: 22px 22px;
+      padding: 42px 0 56px;
+      position: relative;
     }
 
-    .thumb::before {
+    .carousel-window::before,
+    .carousel-window::after {
       content: "";
       position: absolute;
-      inset: 26px;
-      border: 2px solid var(--text);
-      transform: rotate(-4deg);
+      top: 0;
+      width: 12vw;
+      height: 100%;
+      z-index: 5;
+      pointer-events: none;
     }
 
-    .thumb::after {
-      content: "";
+    .carousel-window::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--bg), transparent);
+    }
+
+    .carousel-window::after {
+      right: 0;
+      background: linear-gradient(270deg, var(--bg), transparent);
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 32px;
+      width: max-content;
+      padding-left: 5vw;
+      animation: scrollProjects 34s linear infinite;
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollProjects {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .phone-card {
+      width: 245px;
+      height: 475px;
+      flex: 0 0 auto;
+      border-radius: 38px;
+      padding: 12px;
+      background: var(--dark);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.18);
+      transform: rotate(var(--tilt));
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .phone-card:hover {
+      transform: rotate(0deg) translateY(-14px) scale(1.03);
+      box-shadow: 0 36px 90px rgba(0, 0, 0, 0.28);
+      z-index: 10;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 29px;
+      overflow: hidden;
+      position: relative;
+      background: #ddd;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .phone-notch {
       position: absolute;
-      width: 90px;
-      height: 90px;
-      border: 18px solid var(--accent);
-      border-radius: 50%;
-      right: 30px;
-      bottom: 26px;
-      mix-blend-mode: multiply;
-    }
-
-    .project:nth-child(2) .thumb::before {
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 78px;
+      height: 20px;
       border-radius: 999px;
-      transform: rotate(0deg);
+      background: #080808;
+      z-index: 4;
     }
 
-    .project:nth-child(3) .thumb::before {
-      clip-path: polygon(50% 0, 100% 100%, 0 100%);
-      background: rgba(255, 90, 31, 0.09);
+    .phone-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(100%) contrast(1.08);
+      transition: filter 0.25s ease, transform 0.35s ease;
     }
 
-    .project:nth-child(4) .thumb::after {
-      width: 130px;
-      height: 34px;
-      border-radius: 0;
-      border-width: 12px;
+    .phone-card:hover img {
+      filter: grayscale(0%) contrast(1);
+      transform: scale(1.06);
     }
 
-    .project:nth-child(5) .thumb::before {
-      transform: rotate(8deg);
-      border-style: dashed;
-    }
-
-    .project:nth-child(6) .thumb::after {
-      left: 30px;
-      right: auto;
-    }
-
-    .project-body {
-      padding: 15px;
+    .project-overlay {
+      position: absolute;
+      inset: 0;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      flex: 1;
-      gap: 22px;
+      justify-content: flex-end;
+      padding: 22px 18px;
+      background: linear-gradient(180deg, transparent 32%, rgba(0,0,0,0.78) 100%);
+      color: white;
     }
 
-    .project-title {
-      font-size: 25px;
+    .project-overlay h3 {
+      font-size: 24px;
       line-height: 0.96;
       letter-spacing: -0.055em;
-      font-weight: 900;
       text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
-    .project p {
-      margin-top: 10px;
-      color: var(--muted);
-      line-height: 1.28;
-      font-size: 14px;
+    .project-overlay p {
+      font-size: 13px;
+      line-height: 1.22;
+      color: rgba(255,255,255,0.82);
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.25s ease, max-height 0.25s ease;
     }
 
-    .project-foot {
+    .phone-card:hover .project-overlay p {
+      opacity: 1;
+      max-height: 90px;
+    }
+
+    .project-tags {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      color: var(--muted);
-      font-size: 12px;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .phone-card:hover .project-tags {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-tags span {
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 5px 7px;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .project-number {
+      position: absolute;
+      top: -18px;
+      left: 18px;
+      font-size: 44px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      color: var(--accent);
+      z-index: 5;
+    }
+
+    .case-study-template {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 24px;
+      padding: 68px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-study-template h2 {
+      font-size: clamp(30px, 5vw, 72px);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+      text-transform: uppercase;
+      position: sticky;
+      top: 135px;
+    }
+
+    .case-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .case-block {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+
+    .case-block h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .case-block p,
+    .case-block li {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 15px;
+    }
+
+    .case-block ul {
+      padding-left: 18px;
     }
 
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      padding: 0 0 72px;
+      padding: 68px 0 72px;
     }
 
     .about-card {
@@ -324,15 +417,10 @@
       letter-spacing: 0.04em;
     }
 
-    @media (max-width: 1100px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
       header,
       .hero,
+      .case-study-template,
       .about {
         grid-template-columns: 1fr;
       }
@@ -341,14 +429,25 @@
         flex-wrap: wrap;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
+      .phone-card {
+        width: 215px;
+        height: 420px;
       }
 
-      .section-head,
-      footer {
+      .case-study-template h2 {
+        position: static;
+      }
+
+      footer,
+      .section-head {
         flex-direction: column;
         align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .carousel-track {
+        animation: none;
       }
     }
   </style>
@@ -356,12 +455,13 @@
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="#">Atticus Rothschild<br>Engineering</a>
+      <a class="brand" href="#">Your Name<br>Engineering</a>
       <nav class="nav">
         <a href="#projects">Projects</a>
+        <a href="#case-study-format">Case Study Format</a>
         <a href="#about">About</a>
-        <a href="Atticus_Rothschild_Resume_Final.docx (1).pdf">Resume</a>
-        <a href="mailto:atticusrothschild@gmail.com">Email</a>
+        <a href="resume.pdf">Resume</a>
+        <a href="mailto:youremail@example.com">Email</a>
       </nav>
     </header>
 
@@ -382,87 +482,162 @@
         </div>
       </section>
 
-      <section id="projects">
+      <section id="projects" class="carousel-section">
         <div class="section-head">
           <h2>Selected Work</h2>
-          <p>Project notes focused on constraints, process, failures, results, and what I would improve next.</p>
+          <p>
+            Hover over a project for a quick summary. Click a project to open the full case study page.
+          </p>
         </div>
+        <div class="carousel-note">Replace the placeholder images with your own CAD screenshots, plots, shop photos, and test images.</div>
 
-        <div class="filters">
-          <span class="chip active">All</span>
-          <span class="chip">CAD</span>
-          <span class="chip">Thermal</span>
-          <span class="chip">Robotics</span>
-          <span class="chip">Fabrication</span>
-          <span class="chip">Code</span>
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <!--
+              HOW TO ADD YOUR OWN PROJECT:
+              1. Duplicate one <a class="phone-card"> block.
+              2. Change href="project-name.html" to the page you want it to open.
+              3. Change src="images/example.jpg" to your image path.
+              4. Change the title, description, tags, and project number.
+              5. For the endless carousel, duplicate the full set once more below.
+            -->
+
+            <a class="phone-card" style="--tilt:-5deg" href="projects/fsae-cooling.html">
+              <div class="project-number">01</div>
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="images/fsae-cooling.jpg" alt="FSAE cooling system CAD or radiator image" />
+                <div class="project-overlay">
+                  <h3>FSAE Cooling Architecture</h3>
+                  <p>Radiator sizing, sidepod packaging, heat rejection estimates, airflow constraints, and manufacturability tradeoffs.</p>
+                  <div class="project-tags"><span>Thermal</span><span>FSAE</span><span>MATLAB</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="phone-card" style="--tilt:4deg" href="projects/robotics-simulation.html">
+              <div class="project-number">02</div>
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="images/robotics-simulation.jpg" alt="Robotics simulation screenshot" />
+                <div class="project-overlay">
+                  <h3>Robotics Simulation Workflow</h3>
+                  <p>Simulation tools for testing robot behavior, throughput, and reliability before physical deployment.</p>
+                  <div class="project-tags"><span>Robotics</span><span>Python</span><span>Simulation</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="phone-card" style="--tilt:-2deg" href="projects/engine-rebuild.html">
+              <div class="project-number">03</div>
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="images/engine-rebuild.jpg" alt="Engine rebuild or mechanical diagnostic photo" />
+                <div class="project-overlay">
+                  <h3>Engine Rebuild & Diagnostics</h3>
+                  <p>Teardown, inspection, troubleshooting, reassembly, and documentation of engine components.</p>
+                  <div class="project-tags"><span>Mechanical</span><span>Diagnostics</span><span>Hands-on</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="phone-card" style="--tilt:6deg" href="projects/cad-design.html">
+              <div class="project-number">04</div>
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="images/cad-design.jpg" alt="CAD model or mechanical part render" />
+                <div class="project-overlay">
+                  <h3>CAD Design Iteration</h3>
+                  <p>Mechanical components designed around load paths, assembly order, manufacturability, and packaging constraints.</p>
+                  <div class="project-tags"><span>CAD</span><span>DFM</span><span>Prototype</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="phone-card" style="--tilt:-6deg" href="projects/thermal-modeling.html">
+              <div class="project-number">05</div>
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="images/thermal-modeling.jpg" alt="Thermal model chart or MATLAB plot" />
+                <div class="project-overlay">
+                  <h3>Thermal Modeling Tools</h3>
+                  <p>MATLAB calculations to compare configurations and identify assumptions requiring physical validation.</p>
+                  <div class="project-tags"><span>MATLAB</span><span>Heat Transfer</span><span>Analysis</span></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="phone-card" style="--tilt:3deg" href="projects/fabrication-testing.html">
+              <div class="project-number">06</div>
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <img src="images/fabrication-testing.jpg" alt="Fabrication or testing setup photo" />
+                <div class="project-overlay">
+                  <h3>Fabrication & Testing</h3>
+                  <p>Physical prototypes, failed versions, testing feedback, and design changes based on real-world behavior.</p>
+                  <div class="project-tags"><span>Build</span><span>Test</span><span>Iterate</span></div>
+                </div>
+              </div>
+            </a>
+
+            <!-- DUPLICATED SET FOR SEAMLESS LOOP -->
+            <a class="phone-card" style="--tilt:-5deg" href="projects/fsae-cooling.html" aria-hidden="true">
+              <div class="project-number">01</div>
+              <div class="phone-screen"><div class="phone-notch"></div><img src="images/fsae-cooling.jpg" alt="" /><div class="project-overlay"><h3>FSAE Cooling Architecture</h3><p>Radiator sizing, sidepod packaging, heat rejection estimates, airflow constraints, and manufacturability tradeoffs.</p><div class="project-tags"><span>Thermal</span><span>FSAE</span><span>MATLAB</span></div></div></div>
+            </a>
+
+            <a class="phone-card" style="--tilt:4deg" href="projects/robotics-simulation.html" aria-hidden="true">
+              <div class="project-number">02</div>
+              <div class="phone-screen"><div class="phone-notch"></div><img src="images/robotics-simulation.jpg" alt="" /><div class="project-overlay"><h3>Robotics Simulation Workflow</h3><p>Simulation tools for testing robot behavior, throughput, and reliability before physical deployment.</p><div class="project-tags"><span>Robotics</span><span>Python</span><span>Simulation</span></div></div></div>
+            </a>
+
+            <a class="phone-card" style="--tilt:-2deg" href="projects/engine-rebuild.html" aria-hidden="true">
+              <div class="project-number">03</div>
+              <div class="phone-screen"><div class="phone-notch"></div><img src="images/engine-rebuild.jpg" alt="" /><div class="project-overlay"><h3>Engine Rebuild & Diagnostics</h3><p>Teardown, inspection, troubleshooting, reassembly, and documentation of engine components.</p><div class="project-tags"><span>Mechanical</span><span>Diagnostics</span><span>Hands-on</span></div></div></div>
+            </a>
+
+            <a class="phone-card" style="--tilt:6deg" href="projects/cad-design.html" aria-hidden="true">
+              <div class="project-number">04</div>
+              <div class="phone-screen"><div class="phone-notch"></div><img src="images/cad-design.jpg" alt="" /><div class="project-overlay"><h3>CAD Design Iteration</h3><p>Mechanical components designed around load paths, assembly order, manufacturability, and packaging constraints.</p><div class="project-tags"><span>CAD</span><span>DFM</span><span>Prototype</span></div></div></div>
+            </a>
+
+            <a class="phone-card" style="--tilt:-6deg" href="projects/thermal-modeling.html" aria-hidden="true">
+              <div class="project-number">05</div>
+              <div class="phone-screen"><div class="phone-notch"></div><img src="images/thermal-modeling.jpg" alt="" /><div class="project-overlay"><h3>Thermal Modeling Tools</h3><p>MATLAB calculations to compare configurations and identify assumptions requiring physical validation.</p><div class="project-tags"><span>MATLAB</span><span>Heat Transfer</span><span>Analysis</span></div></div></div>
+            </a>
+
+            <a class="phone-card" style="--tilt:3deg" href="projects/fabrication-testing.html" aria-hidden="true">
+              <div class="project-number">06</div>
+              <div class="phone-screen"><div class="phone-notch"></div><img src="images/fabrication-testing.jpg" alt="" /><div class="project-overlay"><h3>Fabrication & Testing</h3><p>Physical prototypes, failed versions, testing feedback, and design changes based on real-world behavior.</p><div class="project-tags"><span>Build</span><span>Test</span><span>Iterate</span></div></div></div>
+            </a>
+          </div>
         </div>
+      </section>
 
-        <div class="grid">
-          <article class="project">
-            <div class="thumb"></div>
-            <div class="project-body">
-              <div>
-                <h3 class="project-title">FSAE Cooling Architecture</h3>
-                <p>Radiator sizing, sidepod packaging, heat rejection estimates, airflow constraints, and manufacturability tradeoffs.</p>
-              </div>
-              <div class="project-foot"><span>Thermal / Vehicle</span><span>2026</span></div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="thumb"></div>
-            <div class="project-body">
-              <div>
-                <h3 class="project-title">Robotics Simulation Workflow</h3>
-                <p>Simulation tools for testing robot behavior, throughput, and reliability before physical deployment.</p>
-              </div>
-              <div class="project-foot"><span>Robotics / Code</span><span>2026</span></div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="thumb"></div>
-            <div class="project-body">
-              <div>
-                <h3 class="project-title">Engine Rebuild & Diagnostics</h3>
-                <p>Teardown, inspection, troubleshooting, reassembly, and documentation of internal combustion engine components.</p>
-              </div>
-              <div class="project-foot"><span>Mechanical</span><span>2025</span></div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="thumb"></div>
-            <div class="project-body">
-              <div>
-                <h3 class="project-title">CAD Design Iteration</h3>
-                <p>Mechanical components designed around assembly order, load paths, manufacturability, and realistic constraints.</p>
-              </div>
-              <div class="project-foot"><span>CAD / DFM</span><span>2025</span></div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="thumb"></div>
-            <div class="project-body">
-              <div>
-                <h3 class="project-title">Thermal Modeling Tools</h3>
-                <p>MATLAB-based calculations to compare system configurations and identify assumptions requiring physical validation.</p>
-              </div>
-              <div class="project-foot"><span>MATLAB</span><span>2026</span></div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="thumb"></div>
-            <div class="project-body">
-              <div>
-                <h3 class="project-title">Fabrication & Testing</h3>
-                <p>Physical prototypes, failed versions, testing feedback, and design changes based on real-world behavior.</p>
-              </div>
-              <div class="project-foot"><span>Build / Test</span><span>2025</span></div>
-            </div>
-          </article>
+      <section id="case-study-format" class="case-study-template">
+        <h2>Project Page Shell</h2>
+        <div class="case-grid">
+          <div class="case-block">
+            <h3>Problem</h3>
+            <p>What engineering problem were you trying to solve? Example: reduce overheating risk, package a radiator, improve robot reliability, or make a part easier to manufacture.</p>
+          </div>
+          <div class="case-block">
+            <h3>Constraints</h3>
+            <ul>
+              <li>Physical packaging limits</li>
+              <li>Cost, weight, or manufacturing constraints</li>
+              <li>Rules, safety, materials, or reliability requirements</li>
+              <li>Tools available: CAD, MATLAB, Python, fabrication equipment, test setup</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <h3>Process</h3>
+            <p>Show sketches, CAD, photos, calculations, testing, failed versions, and what changed between iterations.</p>
+          </div>
+          <div class="case-block">
+            <h3>Result / Reflection</h3>
+            <p>What worked? What failed? What would you test next? This is where the portfolio starts sounding like real engineering rather than a slideshow.</p>
+          </div>
         </div>
       </section>
 
@@ -489,9 +664,9 @@
     </main>
 
     <footer>
-      <div>© 2026 Atticus Rothschild</div>
+      <div>© 2026 Your Name</div>
       <div>GitHub · LinkedIn · Email</div>
     </footer>
   </div>
 </body>
-</
+</html>
