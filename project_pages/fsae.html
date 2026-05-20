@@ -1,5 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+    const cards = Array.from(document.querySelectorAll('.project-card'));
+    const dotsContainer = document.getElementById('dots');
+    const leftArrow = document.querySelector('.arrow.left');
+    const rightArrow = document.querySelector('.arrow.right');
+    let activeIndex = 2;
+    let timer;
+
+    function shortestOffset(index, active, total) {
+      let offset = index - active;
+      if (offset > total / 2) offset -= total;
+      if (offset < -total / 2) offset += total;
+      return offset;
+    }
+
+    function render() {
+      cards.forEach((card, index) => {
+        card.classList.remove('active', 'pos-0', 'pos-1', 'pos-2', 'pos-3', 'pos--1', 'pos--2', 'pos--3', 'hidden');
+        const offset = shortestOffset(index, activeIndex, cards.length);
+        if (offset === 0) {
+          card.classList.add('active', 'pos-0');
+        } else if (offset >= -3 && offset <= 3) {
+          card.classList.add(`pos-${offset}`);
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      Array.from(dotsContainer.children).forEach((dot, index) => {
+        dot.classList.toggle('active', index === activeIndex);
+      });
+    }
+
+    function next() {
+      activeIndex = (activeIndex + 1) % cards.length;
+      render();
+    }
+
+    function previous() {
+      activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+      render();
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 2000);
+    }
+
+    cards.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot';
+      dot.setAttribute('aria-label', `Go to project ${index + 1}`);
+      dot.addEventListener('click', () => {
+        activeIndex = index;
+        render();
+        resetTimer();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    rightArrow.addEventListener('click', () => { next(); resetTimer(); });
+    leftArrow.addEventListener('click', () => { previous(); resetTimer(); });
+
+    document.querySelector('.carousel-shell').addEventListener('mouseenter', () => clearInterval(timer));
+    document.querySelector('.carousel-shell').addEventListener('mouseleave', resetTimer);
+
+    render();
+    resetTimer();
+  </script>
   <style>
       footer {
       border-top: 1px solid var(--line);
