@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atticus Rothschild — Engineering Portfolio</title>
+  <title>Atticus Rothschild - Engineering Portfolio</title>
   <style>
     :root {
       --bg: #f7f3ec;
@@ -15,16 +15,13 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: radial-gradient(circle at center, #fffdf8 0%, var(--bg) 70%);
       color: var(--text);
       overflow-x: hidden;
     }
-
     a { color: inherit; text-decoration: none; }
 
     .page {
@@ -54,6 +51,7 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 38px;
       font-size: 12px;
       font-weight: 900;
@@ -83,7 +81,7 @@
     h1 {
       font-size: clamp(42px, 6vw, 82px);
       line-height: 0.95;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.04em;
       font-weight: 900;
       margin-bottom: 16px;
     }
@@ -118,7 +116,6 @@
       font-size: 18px;
     }
 
-    /* ROTATING PROJECT CAROUSEL */
     .carousel-shell {
       width: 100vw;
       margin-left: calc(50% - 50vw);
@@ -192,7 +189,7 @@
     .project-card h2 {
       font-size: 25px;
       line-height: 0.98;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.035em;
       text-transform: uppercase;
       margin-bottom: 18px;
       max-width: 210px;
@@ -205,21 +202,9 @@
       max-width: 210px;
     }
 
-    .project-card:hover img {
-      transform: scale(1.06);
-      opacity: 0.92;
-    }
-
-    .project-card.active {
-      width: 310px;
-      height: 430px;
-      z-index: 8;
-    }
-
-    .project-card.active h2 {
-      font-size: 28px;
-    }
-
+    .project-card:hover img { transform: scale(1.06); opacity: 0.92; }
+    .project-card.active { width: 310px; height: 430px; z-index: 8; }
+    .project-card.active h2 { font-size: 28px; }
     .project-card.pos-0 { transform: translateX(0) translateY(0) rotateZ(0deg) scale(1); opacity: 1; z-index: 8; }
     .project-card.pos-1 { transform: translateX(360px) translateY(18px) rotateZ(2deg) scale(.82); opacity: .96; z-index: 6; }
     .project-card.pos-2 { transform: translateX(650px) translateY(22px) rotateZ(-2deg) scale(.74); opacity: .72; z-index: 4; filter: saturate(.85); }
@@ -246,7 +231,6 @@
       display: grid;
       place-items: center;
     }
-
     .arrow.left { left: 24px; }
     .arrow.right { right: 24px; }
 
@@ -267,11 +251,56 @@
       cursor: pointer;
       transition: background 250ms ease, transform 250ms ease;
     }
+    .dot.active { background: var(--accent); transform: scale(1.15); }
 
-    .dot.active {
-      background: var(--accent);
-      transform: scale(1.15);
+    .about {
+      padding: 80px 0;
+      border-top: 1px solid var(--line);
     }
+
+    .about h2 {
+      font-size: clamp(34px, 5vw, 72px);
+      line-height: 0.92;
+      letter-spacing: -0.045em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .about-intro {
+      max-width: 850px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+      margin-bottom: 26px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .about-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.44);
+      padding: 22px;
+      min-height: 180px;
+    }
+
+    .about-card h3 {
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .about-card p, .about-card li {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .about-card ul { padding-left: 18px; }
 
     footer {
       border-top: 1px solid var(--line);
@@ -286,68 +315,14 @@
       text-transform: uppercase;
     }
 
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      color: #332f2b;
-    }
-
-    .bolt {
-      font-size: 24px;
-    }
-
-    .socials {
-      display: flex;
-      gap: 26px;
-      font-weight: 900;
-    }
-
-    .below {
-      padding: 80px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .below h2 {
-      font-size: clamp(34px, 5vw, 72px);
-      line-height: 0.92;
-      letter-spacing: -0.065em;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .below-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .below-card {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.44);
-      padding: 22px;
-      min-height: 180px;
-    }
-
-    .below-card h3 {
-      font-size: 13px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .below-card p, .below-card li {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.45;
-    }
-
-    .below-card ul { padding-left: 18px; }
+    .footer-left { display: flex; align-items: center; gap: 16px; color: #332f2b; }
+    .bolt { font-size: 24px; }
+    .socials { display: flex; gap: 26px; font-weight: 900; }
 
     @media (max-width: 900px) {
       .page { width: 92vw; }
-      header { flex-direction: column; gap: 14px; }
-      nav { flex-wrap: wrap; gap: 18px; }
+      header { flex-direction: column; gap: 14px; align-items: flex-start; }
+      nav { gap: 18px; }
       .hero { min-height: auto; padding-top: 20px; }
       .carousel { height: 390px; justify-content: flex-start; overflow-x: auto; padding: 0 24px; }
       .project-card,
@@ -362,7 +337,7 @@
         filter: none;
       }
       .arrow, .dots { display: none; }
-      .below-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -370,11 +345,12 @@
 <body>
   <div class="page">
     <header>
+      <a class="brand" href="#projects">Atticus Rothschild</a>
       <nav>
         <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="images/Atticus_Rothschild_Resume_Final.docx (1).pdf">Resume</a>
-        <a href="mailto:youremail@example.com">Contact</a>
+        <a href="#about">About Me</a>
+        <a href="images/Atticus_Rothschild_Resume_Final.docx%20(1).pdf">Resume</a>
+        <a href="https://github.com/atticusrothschild">GitHub</a>
       </nav>
     </header>
 
@@ -383,63 +359,62 @@
         <div class="eyebrow">Atticus Rothschild</div>
         <h1>Engineering Portfolio</h1>
         <p class="subtitle">Mechanical engineering projects in automotive, robotics, thermal systems, CAD, fabrication, and testing.</p>
-        <a class="project-format" href="#about">See project format <span>→</span></a>
+        <a class="project-format" href="#about">About me <span>></span></a>
 
         <div class="carousel-shell">
           <button class="arrow left" aria-label="Previous project">‹</button>
           <div class="carousel" id="carousel">
-            <!-- Replace the image paths with your own files in an /images folder. -->
             <a class="project-card" href="project_pages/fsae.html">
-              <img src="images/riceracing2.png" alt="FSAE cooling project">
+              <img src="images/riceracing2.png" alt="Rice Formula SAE car">
               <div class="project-content">
                 <div class="project-number">01</div>
                 <h2>FSAE Cooling and Fuel Specialist</h2>
-                <p>Design and analysis of a cooling and fuel system for Rice Formula SAE.</p>
+                <p>Cooling and fuel system design work for Rice Formula SAE.</p>
               </div>
             </a>
 
-            <a class="project-card" href="projects/robotics-simulation.html">
+            <a class="project-card" href="project_pages/robotics-simulation.html">
               <img src="images/Screenshot 2026-05-19 205520.png" alt="Robotics simulation project">
               <div class="project-content">
                 <div class="project-number">02</div>
                 <h2>Robotics Simulation</h2>
-                <p>Building Simulation for Warehouse Robotics in Unreal Engine</p>
+                <p>Warehouse robotics simulation work built in Unreal Engine.</p>
               </div>
             </a>
 
-            <a class="project-card" href="projects/engine-diagnostics.html">
+            <a class="project-card" href="project_pages/engine-diagnostics.html">
               <img src="images/engine_image.png" alt="Engine diagnostics and repair">
               <div class="project-content">
                 <div class="project-number">03</div>
                 <h2>Engine Diagnostics</h2>
-                <p>Engine tear-down, inspection, and analysis performed to improve reliability and performance</p>
+                <p>Engine tear-down, inspection, and reliability-focused analysis.</p>
               </div>
             </a>
 
-            <a class="project-card" href="projects/speakers.html">
-              <img src="images/speaker.jpg" alt="Thermal modeling project">
+            <a class="project-card" href="project_pages/speaker-design.html">
+              <img src="images/riceracing1.png" alt="Speaker design and fabrication project">
               <div class="project-content">
                 <div class="project-number">04</div>
                 <h2>Speaker Design and Fabrication</h2>
-                <p> Designed and built large stereo speakers for personal use</p>
+                <p>Large stereo speaker design and hands-on fabrication.</p>
               </div>
             </a>
 
-            <a class="project-card" href="projects/fabrication-testing.html">
-              <img src="images/fabrication-testing.jpg" alt="Fabrication and testing project">
+            <a class="project-card" href="project_pages/fabrication-testing.html">
+              <img src="images/riceracing.png" alt="Fabrication and testing project">
               <div class="project-content">
                 <div class="project-number">05</div>
-                <h2>Fabrication & Testing</h2>
-                <p>Design, manufacturing, and testing of mechanical components, prototypes, and fixtures.</p>
+                <h2>Fabrication and Testing</h2>
+                <p>Mechanical prototypes, fixtures, validation, and test iteration.</p>
               </div>
             </a>
 
-            <a class="project-card" href="projects/cad-design.html">
-              <img src="images/cad-design.jpg" alt="CAD design project">
+            <a class="project-card" href="project_pages/cad-design.html">
+              <img src="images/riceracingwhitesmall.png" alt="CAD design project">
               <div class="project-content">
                 <div class="project-number">06</div>
                 <h2>CAD Design</h2>
-                <p>Mechanical design iterations focused on packaging, manufacturability, and assembly.</p>
+                <p>Mechanical design iterations focused on packaging and assembly.</p>
               </div>
             </a>
           </div>
@@ -448,27 +423,28 @@
         </div>
       </section>
 
-      <section class="below" id="about">
-        <h2>Project Page Format</h2>
-        <div class="below-grid">
-          <div class="below-card">
-            <h3>Problem</h3>
-            <p>What engineering problem were you solving? Explain the need, not just the object.</p>
+      <section class="about" id="about">
+        <h2>About Me</h2>
+        <p class="about-intro">I am a mechanical engineering student focused on practical design work: building, testing, and improving real systems. My projects sit at the intersection of automotive engineering, robotics simulation, CAD, fabrication, and thermal systems.</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Engineering Focus</h3>
+            <p>Mechanical design, analysis, manufacturing, and testing for systems that have to work outside a classroom problem set.</p>
           </div>
-          <div class="below-card">
-            <h3>Constraints</h3>
+          <div class="about-card">
+            <h3>Project Style</h3>
             <ul>
-              <li>Packaging, weight, cost, time, safety, materials</li>
-              <li>Rules, assumptions, and available tools</li>
+              <li>Start from the problem and constraints</li>
+              <li>Build, inspect, test, and iterate</li>
             </ul>
           </div>
-          <div class="below-card">
-            <h3>Process</h3>
-            <p>Show CAD, calculations, code, test setups, failed versions, and design changes.</p>
+          <div class="about-card">
+            <h3>Tools and Systems</h3>
+            <p>CAD, mechanical prototyping, automotive subsystems, Unreal Engine simulation, and hands-on fabrication.</p>
           </div>
-          <div class="below-card">
-            <h3>Result</h3>
-            <p>What worked, what failed, what you measured, and what you would improve next.</p>
+          <div class="about-card">
+            <h3>Resume</h3>
+            <p>For more detail on experience, skills, and project history, view the current resume linked above.</p>
           </div>
         </div>
       </section>
@@ -476,7 +452,7 @@
 
     <footer>
       <div class="footer-left"><span class="bolt">↯</span><span>Solving real problems. Building better systems.</span></div>
-      <div class="socials"><a href="https://linkedin.com/in/yourusername">in</a><a href="https://github.com/yourusername">GitHub</a><a href="mailto:youremail@example.com">Mail</a></div>
+      <div class="socials"><a href="images/Atticus_Rothschild_Resume_Final.docx%20(1).pdf">Resume</a><a href="https://github.com/atticusrothschild">GitHub</a><a href="#about">About</a></div>
     </footer>
   </div>
 
@@ -485,7 +461,7 @@
     const dotsContainer = document.getElementById('dots');
     const leftArrow = document.querySelector('.arrow.left');
     const rightArrow = document.querySelector('.arrow.right');
-    let activeIndex = 2;
+    let activeIndex = 0;
     let timer;
 
     function shortestOffset(index, active, total) {
@@ -525,7 +501,7 @@
 
     function resetTimer() {
       clearInterval(timer);
-      timer = setInterval(next, 2000);
+      timer = setInterval(next, 2800);
     }
 
     cards.forEach((_, index) => {
@@ -542,9 +518,6 @@
 
     rightArrow.addEventListener('click', () => { next(); resetTimer(); });
     leftArrow.addEventListener('click', () => { previous(); resetTimer(); });
-
-    document.querySelector('.carousel-shell').addEventListener('mouseenter', () => clearInterval(timer));
-    document.querySelector('.carousel-shell').addEventListener('mouseleave', resetTimer);
 
     render();
     resetTimer();
