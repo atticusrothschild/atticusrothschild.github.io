@@ -66,3 +66,5 @@ User confirms only the micromanipulator has been physically built/assembled in t
 User confirms assembling micromanipulator from mostly 3D-printed parts and purchased motors/electronics. Earlier wiring PDFs were found; source micromanipulator chat not yet located in recent/pinned list.
 
 User supplied four authentic engine/cleanroom photos. Added lithography, ALD, dicer photos to EMERGE; engine bench photo replaces generic team-session lead image on FSAE. Copied originals unchanged; captions identify visible equipment without attributing screen settings to completed experiments.
+
+Added three user-supplied Kong photos: microscope monitor, printed sample, and sample with electrical connections. Captions describe visible content without inferring exact materials, measurement outcome or function.
