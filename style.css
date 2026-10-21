@@ -32,3 +32,6 @@ img.portrait{width:230px;height:280px}
 .detail h2{font-size:15px}.intro{padding-bottom:20px}
 figcaption{font-size:12px}footer{padding-top:18px;padding-bottom:22px}
 @media(max-width:760px){.about{grid-template-columns:1fr;gap:28px;padding-top:36px}img.portrait{width:160px;height:180px}h1{font-size:30px}.detail{padding-top:20px}}
+
+/* Make contextual project links visible and contact links wrap on small screens. */
+.about p a{text-decoration:underline;text-decoration-color:#a4ada5;text-underline-offset:3px}.text-links,footer div{flex-wrap:wrap}
