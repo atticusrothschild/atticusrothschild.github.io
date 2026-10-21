@@ -37,3 +37,5 @@ Rapyuta user confirms being among a small group familiar with robot operation, h
 Rapyuta troubleshooting confirmed by user: bin-lifting pushers could overextend and fail to retract, requiring manual reset; robots occasionally lost line following during hard/fast operation. Describe recovery and observed faults; do not claim redesign, permanent fix, or established root cause.
 
 User confirms picking-station implementation combined Unreal Blueprints and C++, tied into ROS. ROS version, topics, messages, and integration architecture are not yet specified.
+
+User confirms robot communication used ROS nodes and this communication was also simulated. Do not infer specific protocols, ROS version, or that Atticus personally authored all ROS infrastructure.
