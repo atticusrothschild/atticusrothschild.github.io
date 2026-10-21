@@ -6,10 +6,12 @@ Emphasize documented precision mechanical design, CAD fixtures, optical testing,
 
 Do not imply semiconductor fab employment, production-process qualification, or proven material performance. Kong thermal comparisons were exploratory: thickness showed a stronger relationship with temperature than foaming-agent condition. Nozzle height is not interchangeable with measured sample thickness.
 
-User prefers minimal top navigation, a formal About page with portrait, compact project imagery, and review on a branch before publication. Rapyuta Robotics has its own tab. MECH 450 enrollment as a sophomore with special professor permission is user-provided; do not invent the course title.
+User prefers minimal top navigation, a formal About page with portrait, compact project imagery, and review on a branch before publication. Rapyuta Robotics has its own tab. MECH 450 enrollment as a sophomore with special professor permission is user-provided; title verified in Rice's current catalog: Algorithmic and AI-enabled Robotics, an upper-level undergraduate course.
 
 Visual and editorial preference: avoid a generic AI-template appearance. Use literal project names, plain first-person descriptions, authentic lab photos and measured results. No marketing slogans, decorative badges, stock illustrations, gradient heroes, card grids, or repeated arrow ornaments. Keep professional and understated.
 
 Do not use images/engine_image.png: user identified it as AI-generated and will provide real replacement photos. Rice Racing engine-session photo source: https://www.riceracing.org/IMG_5178.jpeg (official team update, February 19, 2026). Team context only; do not attribute the pictured session to Atticus. Fuel schematic is an early concept, superseded in details. Radiator diagram is a preliminary AI-assisted packaging study, not validated CFD or test evidence.
 
 Keep the site informational and elegant, with a little individual character. Prefer concise project descriptions over repeated role summaries, large hero sections, or promotional language.
+
+MECH 450 project evidence: Project Part One Requirements chat, 6acd7d08-c128-83ea-a8db-57e2df84e3f2; attached Project_3__1___Copy_.pdf, October 15, 2026. Report explicitly credits Atticus with leading C++ RTP implementation; partner designed scenes and ran trials. Describe as simulated coursework, not physical robot deployment. Course source: https://ga.rice.edu/programs-study/departments-programs/engineering/mechanical-engineering/
