@@ -27,3 +27,5 @@ Rapyuta user detail Oct 21: pre-release ASRS (internally OKS); CAD picking-stati
 Rapyuta clarification: user confirms physical robot count increased from 3 to 9; contributed internal UI changes for starting robot images and recalls reducing message rate. Symptoms were disconnects and slow movement. Use 3 to 9 (3x, 200% increase), not 300% increase. Network congestion remains described as suspected; exact image type, protocol and rates not established.
 
 Rapyuta latest correction: user is uncertain whether the final robot count was 9 or 12 and requests no numbers. Supersedes earlier count wording: omit both counts and percentages; describe increased simultaneous physical-robot operation qualitatively.
+
+Latest display preference: retain percentage, omit absolute counts. Use 'to 300% of its original capacity' based on earlier confirmed tripling; do not change to 'increased by 300%' without a confirmed fourfold result.
