@@ -60,3 +60,5 @@ User confirms slower deliberate resist dispensing with a little excess resist re
 User confirms adjusting spin speed and bake time to suit equipment/sample preparation. No specific settings or quantified outcomes established. User requests moving to next topic.
 
 User confirms full mechanical CAD design of optical setup, including light box, holder and positioning hardware. Physical fabrication/assembly and completed testing remain to clarify; do not infer from CAD ownership.
+
+User confirms only the micromanipulator has been physically built/assembled in the optical setup. Light box and chip holder remain CAD designs; no completed optical testing claimed.
