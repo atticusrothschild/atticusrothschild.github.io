@@ -4,3 +4,5 @@ img.portrait{width:280px;height:340px;object-fit:cover;object-position:center;bo
 
 nav{gap:26px}.team-logo{max-width:260px}.team-logo img{max-height:160px}.project-visual{max-width:620px}.project-visual img{max-height:340px}.small-media{max-width:320px;margin:0 0 24px}.small-media img{max-height:300px}.media-grid{display:grid;gap:24px;max-width:650px}.media-grid figure{margin:0}video{display:block;width:100%;background:#eee;border-radius:2px}@media(max-width:900px){nav{overflow-x:auto;white-space:nowrap;gap:23px}}
 nav{overflow-y:hidden}
+
+.research-photo{max-width:620px;margin:8px 0 32px}.research-photo img{max-height:320px;object-fit:contain;background:#f6f7f4}.detail .research-photo{margin-top:24px}
