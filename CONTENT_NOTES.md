@@ -58,3 +58,5 @@ Portfolio review against MIT MechE Communication Lab and Olin PGP guidance: prio
 User confirms slower deliberate resist dispensing with a little excess resist reduced comet defects and produced a smoother coating. Qualitative observation only, no quantified defect reduction.
 
 User confirms adjusting spin speed and bake time to suit equipment/sample preparation. No specific settings or quantified outcomes established. User requests moving to next topic.
+
+User confirms full mechanical CAD design of optical setup, including light box, holder and positioning hardware. Physical fabrication/assembly and completed testing remain to clarify; do not infer from CAD ownership.
