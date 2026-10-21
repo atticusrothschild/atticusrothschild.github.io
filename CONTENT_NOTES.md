@@ -41,3 +41,5 @@ User confirms picking-station implementation combined Unreal Blueprints and C++,
 User confirms robot communication used ROS nodes and this communication was also simulated. Do not infer specific protocols, ROS version, or that Atticus personally authored all ROS infrastructure.
 
 User clarifies picking-station CAD modeled an existing layout; do not imply original physical station design.
+
+EMERGE current priority per user: cleanroom transistor fabrication for same-material device-behavior prediction; collaborator handles electrical testing and ML training. Silicon first; 2D/bioelectronic materials planned. MoS2/graphene and professor identity uncertain, omitted pending confirmation. Spring-based MEMS microrelay in design, with future modeling research goal. Earlier Pico/stepper/encoder micromanipulator and light box for laser absorption of 2D-material chips belongs second half. Updated About accordingly.
