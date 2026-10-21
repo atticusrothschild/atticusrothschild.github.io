@@ -56,3 +56,5 @@ User confirms no transistors have been electrically tested yet. Testing and mode
 
 Portfolio review against MIT MechE Communication Lab and Olin PGP guidance: prioritize relevant work, clear objectives/individual contribution/process/results, skim-friendly headings, authentic visuals and contact access. Sources: https://mitcommlab.mit.edu/meche/commkit/portfolio/ ; https://libguides.olin.edu/c.php?g=1113246&p=9418780 . Main remaining evidence gaps: EMERGE wafer/process images, optical apparatus photos, and more images of user's FSAE work. Do not manufacture evidence or turn ongoing work into completed outcomes.
 User confirms slower deliberate resist dispensing with a little excess resist reduced comet defects and produced a smoother coating. Qualitative observation only, no quantified defect reduction.
+
+User confirms adjusting spin speed and bake time to suit equipment/sample preparation. No specific settings or quantified outcomes established. User requests moving to next topic.
