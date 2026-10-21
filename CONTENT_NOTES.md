@@ -39,3 +39,5 @@ Rapyuta troubleshooting confirmed by user: bin-lifting pushers could overextend 
 User confirms picking-station implementation combined Unreal Blueprints and C++, tied into ROS. ROS version, topics, messages, and integration architecture are not yet specified.
 
 User confirms robot communication used ROS nodes and this communication was also simulated. Do not infer specific protocols, ROS version, or that Atticus personally authored all ROS infrastructure.
+
+User clarifies picking-station CAD modeled an existing layout; do not imply original physical station design.
