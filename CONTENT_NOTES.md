@@ -15,3 +15,5 @@ Do not use images/engine_image.png: user identified it as AI-generated and will 
 Keep the site informational and elegant, with a little individual character. Prefer concise project descriptions over repeated role summaries, large hero sections, or promotional language.
 
 MECH 450 project evidence: Project Part One Requirements chat, 6acd7d08-c128-83ea-a8db-57e2df84e3f2; attached Project_3__1___Copy_.pdf, October 15, 2026. Report explicitly credits Atticus with leading C++ RTP implementation; partner designed scenes and ran trials. Describe as simulated coursework, not physical robot deployment. Course source: https://ga.rice.edu/programs-study/departments-programs/engineering/mechanical-engineering/
+
+User reports Kong Lab publication pending (October 21, 2026). Display that status without implying acceptance, a journal, publication date, or authorship order.
