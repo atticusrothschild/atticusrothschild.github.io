@@ -62,3 +62,5 @@ User confirms adjusting spin speed and bake time to suit equipment/sample prepar
 User confirms full mechanical CAD design of optical setup, including light box, holder and positioning hardware. Physical fabrication/assembly and completed testing remain to clarify; do not infer from CAD ownership.
 
 User confirms only the micromanipulator has been physically built/assembled in the optical setup. Light box and chip holder remain CAD designs; no completed optical testing claimed.
+
+User confirms assembling micromanipulator from mostly 3D-printed parts and purchased motors/electronics. Earlier wiring PDFs were found; source micromanipulator chat not yet located in recent/pinned list.
