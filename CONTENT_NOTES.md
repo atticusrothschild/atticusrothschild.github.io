@@ -64,3 +64,5 @@ User confirms full mechanical CAD design of optical setup, including light box, 
 User confirms only the micromanipulator has been physically built/assembled in the optical setup. Light box and chip holder remain CAD designs; no completed optical testing claimed.
 
 User confirms assembling micromanipulator from mostly 3D-printed parts and purchased motors/electronics. Earlier wiring PDFs were found; source micromanipulator chat not yet located in recent/pinned list.
+
+User supplied four authentic engine/cleanroom photos. Added lithography, ALD, dicer photos to EMERGE; engine bench photo replaces generic team-session lead image on FSAE. Copied originals unchanged; captions identify visible equipment without attributing screen settings to completed experiments.

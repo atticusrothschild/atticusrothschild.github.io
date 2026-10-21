@@ -35,3 +35,5 @@ figcaption{font-size:12px}footer{padding-top:18px;padding-bottom:22px}
 
 /* Make contextual project links visible and contact links wrap on small screens. */
 .about p a{text-decoration:underline;text-decoration-color:#a4ada5;text-underline-offset:3px}.text-links,footer div{flex-wrap:wrap}
+
+.equipment-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}.equipment-photos figure{margin:0;min-width:0}.equipment-photos img{display:block;width:100%;height:auto;max-height:none;background:none}.equipment-photos a{display:block}@media(max-width:480px){.equipment-photos{grid-template-columns:1fr;max-width:260px;gap:24px}}
