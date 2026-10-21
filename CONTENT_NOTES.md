@@ -49,3 +49,5 @@ User confirms spin coating multiple photoresists, baking, developer/photolithogr
 User confirms planned bioelectronic material is PEDOT; exact formulation (including PSS) unconfirmed. Devices initially supplied by another lab; own fabrication possible later, not committed or completed. Supplier professor remains unconfirmed.
 
 User confirms MEMS microrelay uses electrostatic force to move the spring structure. Actuation voltage, dimensions, geometry and fabrication status beyond in-design are not established.
+
+Latest user correction: MEMS design has not started; planned approach follows Elad Alon coauthored relay research. Removed active-design claim from About and EMERGE. Candidate reference: Kam et al., Design, Optimization, and Scaling of MEM Relays for Ultra-Low-Power Digital Logic, DOI 10.1109/TED.2010.2082545. Exact intended paper/process remains unconfirmed; do not claim specific geometry, fabrication recipe or completed modeling.
