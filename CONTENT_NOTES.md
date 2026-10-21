@@ -51,3 +51,5 @@ User confirms planned bioelectronic material is PEDOT; exact formulation (includ
 User confirms MEMS microrelay uses electrostatic force to move the spring structure. Actuation voltage, dimensions, geometry and fabrication status beyond in-design are not established.
 
 Latest user correction: MEMS design has not started; planned approach follows Elad Alon coauthored relay research. Removed active-design claim from About and EMERGE. Candidate reference: Kam et al., Design, Optimization, and Scaling of MEM Relays for Ultra-Low-Power Digital Logic, DOI 10.1109/TED.2010.2082545. Exact intended paper/process remains unconfirmed; do not claim specific geometry, fabrication recipe or completed modeling.
+
+User confirms no transistors have been electrically tested yet. Testing and model training are collaborator responsibilities, not the user's role.
