@@ -35,3 +35,5 @@ User confirms simulated picking station enabled future robotic-arm picking simul
 Rapyuta user confirms being among a small group familiar with robot operation, hardware, recurring problems and fixes; trusted to run tests with new code and prospective-client demonstrations. Do not imply sole responsibility or formal release approval.
 
 Rapyuta troubleshooting confirmed by user: bin-lifting pushers could overextend and fail to retract, requiring manual reset; robots occasionally lost line following during hard/fast operation. Describe recovery and observed faults; do not claim redesign, permanent fix, or established root cause.
+
+User confirms picking-station implementation combined Unreal Blueprints and C++, tied into ROS. ROS version, topics, messages, and integration architecture are not yet specified.
