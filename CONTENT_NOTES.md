@@ -19,3 +19,5 @@ MECH 450 project evidence: Project Part One Requirements chat, 6acd7d08-c128-83e
 User reports Kong Lab publication pending (October 21, 2026). Display that status without implying acceptance, a journal, publication date, or authorship order.
 
 FSAE expanded from Size the FSAE radiator and Choose FSAE fuel verification method chats, plus saved model notes and WAVE DESIGN_UPDATE. Cover energy-balance exploration, thermal sizing, fan curves/electrical demand, supplier construction discussions, WAVE operating points, endurance scenarios, usable capacity and HydraMat integration. 21.8 kW is provisional; no validated full-sidepod CFD or measured endurance consumption. Do not reuse superseded initial radiator sizing recommendations or imply sole authorship of assisted models.
+
+MECH 450 project belongs at the end of the Rapyuta page as subsequent Rice coursework, per user preference. Keep the institution and dates explicit so it is not mistaken for internship work.
