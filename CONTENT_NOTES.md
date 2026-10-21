@@ -47,3 +47,5 @@ EMERGE current priority per user: cleanroom transistor fabrication for same-mate
 User confirms spin coating multiple photoresists, baking, developer/photolithography, chemical polymer removal, plasma cleaning, ellipsometer, ALDS and dicer. Avoid guessing acid, etch/lift-off recipe, film composition or tool certification. Bioelectronic neural-interface devices are planned, not fabricated yet. Scott Keene is a plausible professor based on Rice faculty profile and organic-electronics neural-interface research; NOT confirmed collaborator. Do not name on site until confirmed.
 
 User confirms planned bioelectronic material is PEDOT; exact formulation (including PSS) unconfirmed. Devices initially supplied by another lab; own fabrication possible later, not committed or completed. Supplier professor remains unconfirmed.
+
+User confirms MEMS microrelay uses electrostatic force to move the spring structure. Actuation voltage, dimensions, geometry and fabrication status beyond in-design are not established.
