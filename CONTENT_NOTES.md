@@ -68,3 +68,5 @@ User confirms assembling micromanipulator from mostly 3D-printed parts and purch
 User supplied four authentic engine/cleanroom photos. Added lithography, ALD, dicer photos to EMERGE; engine bench photo replaces generic team-session lead image on FSAE. Copied originals unchanged; captions identify visible equipment without attributing screen settings to completed experiments.
 
 Added three user-supplied Kong photos: microscope monitor, printed sample, and sample with electrical connections. Captions describe visible content without inferring exact materials, measurement outcome or function.
+
+Rapyuta media: user supplied four original photographs of ASRS hardware, operator display, and demonstration setup, plus IMG_1844.mp4 described as their line-following troubleshooting. Added contextual images and a manually played video; no additional performance or root-cause claims.
