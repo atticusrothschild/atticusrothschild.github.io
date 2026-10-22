@@ -60,3 +60,10 @@ figcaption{font-size:12px}footer{padding-top:18px;padding-bottom:22px}
 figure a:has(img){cursor:zoom-in}
 
 figure a:has(img){display:block}.upright-photo>a{position:absolute;inset:0;display:block}.portrait-link{display:block;cursor:zoom-in}@media(max-width:760px){.portrait-link{grid-row:1;width:160px}}
+
+.rapyuta-intro{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:40px;align-items:start;padding:36px 0 18px}
+.rapyuta-intro .intro{padding:0;max-width:none}.rapyuta-intro .lead{margin-bottom:0}
+.rapyuta-intro .project-visual{margin:0;max-width:200px}.rapyuta-intro .project-visual img{width:100%;height:auto;max-height:none;background:none}
+.rapyuta-intro figcaption{font-size:11px}
+@media(max-width:760px){.rapyuta-intro{grid-template-columns:minmax(0,1fr) 150px;gap:22px;padding-top:32px}}
+@media(max-width:540px){.rapyuta-intro{grid-template-columns:1fr;gap:20px}.rapyuta-intro .project-visual{max-width:150px}}
