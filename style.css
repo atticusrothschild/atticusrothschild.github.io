@@ -89,3 +89,13 @@ figure a:has(img){display:block}.upright-photo>a{position:absolute;inset:0;displ
 
 .speaker-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}.speaker-photos figure{margin:0}@media(max-width:480px){.speaker-photos{grid-template-columns:1fr}}
 .fire1-product{max-width:400px}.fire1-product img{width:100%;height:auto}.fire1-product figcaption a{text-decoration:underline;text-underline-offset:2px}
+/* Keep related media together in rows instead of balancing them into columns. */
+.project-photos{display:grid;columns:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.project-photos figure{margin:0;min-width:0}
+.demonstration-media{grid-template-columns:repeat(3,minmax(0,1fr));max-width:650px;gap:16px}
+.demonstration-media img,.demonstration-media video{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.demonstration-media .troubleshooting-video{max-width:none;margin:0}
+.media-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.media-grid video{aspect-ratio:4/3;object-fit:contain;background:#171717}
+@media(max-width:540px){.demonstration-media{gap:10px}.demonstration-media figcaption{font-size:11px}}
+@media(max-width:480px){.project-photos:not(.demonstration-media),.media-grid{grid-template-columns:1fr}.demonstration-media{max-width:none}}
