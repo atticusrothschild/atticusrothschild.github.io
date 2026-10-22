@@ -74,3 +74,4 @@ Rapyuta media: user supplied four original photographs of ASRS hardware, operato
 Speaker project: four original photographs supplied by the user show cabinet assembly, driver installation, crossover wiring/acoustic lining, and the completed loudspeaker. Added to Other work with descriptive captions; no new acoustic performance claims.
 Speaker design clarification: user adapted an existing design into their own build; do not claim an entirely original cabinet or crossover design. Specific modifications remain to be clarified.
 Speaker fabrication challenge: user identified closely spaced kerf cuts for the curved cabinet as the hardest part, requiring delicate and careful work. Cut dimensions, tooling, and specific failures have not been confirmed.
+Speaker follow-up: user confirmed calculations determined kerf spacing and cut depth; numerical values and calculation method remain unspecified.
