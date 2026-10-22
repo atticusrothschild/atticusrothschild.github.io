@@ -76,3 +76,4 @@ Speaker design clarification: user adapted an existing design into their own bui
 Speaker fabrication challenge: user identified closely spaced kerf cuts for the curved cabinet as the hardest part, requiring delicate and careful work. Cut dimensions, tooling, and specific failures have not been confirmed.
 Speaker follow-up: user confirmed calculations determined kerf spacing and cut depth; numerical values and calculation method remain unspecified.
 Speaker testing clarification: user performed listening tests and frequency tests with a frequency generator. This supersedes the broad acoustic measurement/performance tuning wording; microphone measurements and quantitative response data are not confirmed.
+Speaker troubleshooting: user reported that testing revealed rattling traced to a loose connection. Connection type and repair outcome are not yet specified.
