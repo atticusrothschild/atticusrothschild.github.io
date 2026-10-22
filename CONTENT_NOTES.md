@@ -85,3 +85,5 @@ FIRE1 outcome: user confirmed testing was still ongoing at placement end. Work i
 FIRE1 test setup confirmed by user: both benchtop fixtures and anatomical models. Added downloadable portfolio PDF snapshot to Other work; regenerate it when project content changes.
 
 User identified Kong video 1 as PDMS insulating-layer printing, video 2 as PDMS printing without foaming agent, and video 3 as IR sensor temperature readings. Corrected captions and accessible labels. Connected previously unlinked figure images to the gallery.
+
+Lee Gagne media: user supplied IMG_0779.JPG (engine suspended from a hoist) and IMG_1079.MOV (workshop footage). Added original photo and web-encoded video with neutral captions, without assuming engine model or identifying people.

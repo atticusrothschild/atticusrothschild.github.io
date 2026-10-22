@@ -83,3 +83,4 @@ figure a:has(img){display:block}.upright-photo>a{position:absolute;inset:0;displ
 .project-photos{display:block;columns:2;column-gap:20px;max-width:460px}
 .project-photos figure{display:inline-block;vertical-align:top;break-inside:avoid;width:100%;margin:0 0 20px}
 @media(max-width:480px){.project-photos{columns:1;max-width:260px}}
+.engine-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}.engine-media video{aspect-ratio:9/16}@media(max-width:480px){.engine-media{grid-template-columns:1fr}}
