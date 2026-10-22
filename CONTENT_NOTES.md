@@ -83,3 +83,5 @@ FIRE1 clarification: user confirmed nitinol frame material and that frame parts 
 FIRE1 personal contribution: user ran deployment tests and tried changes to sensor loading and release to prevent the nitinol frame catching on itself during deployment. Successful outcome and repeatability not yet confirmed.
 FIRE1 outcome: user confirmed testing was still ongoing at placement end. Work involved tradeoffs between engineering performance, physician deployment workflow, and fluoroscopic visibility. Do not claim a validated solution, clinical testing by the user, or operation of fluoroscopy equipment.
 FIRE1 test setup confirmed by user: both benchtop fixtures and anatomical models. Added downloadable portfolio PDF snapshot to Other work; regenerate it when project content changes.
+
+User identified Kong video 1 as PDMS insulating-layer printing, video 2 as PDMS printing without foaming agent, and video 3 as IR sensor temperature readings. Corrected captions and accessible labels. Connected previously unlinked figure images to the gallery.
