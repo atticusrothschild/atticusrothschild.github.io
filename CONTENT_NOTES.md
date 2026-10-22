@@ -70,3 +70,5 @@ User supplied four authentic engine/cleanroom photos. Added lithography, ALD, di
 Added three user-supplied Kong photos: microscope monitor, printed sample, and sample with electrical connections. Captions describe visible content without inferring exact materials, measurement outcome or function.
 
 Rapyuta media: user supplied four original photographs of ASRS hardware, operator display, and demonstration setup, plus IMG_1844.mp4 described as their line-following troubleshooting. Added contextual images and a manually played video; no additional performance or root-cause claims.
+
+Speaker project: four original photographs supplied by the user show cabinet assembly, driver installation, crossover wiring/acoustic lining, and the completed loudspeaker. Added to Other work with descriptive captions; no new acoustic performance claims.
