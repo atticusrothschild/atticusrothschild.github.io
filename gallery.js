@@ -32,7 +32,7 @@
     const thumbnail = link.querySelector('img');
     image.src = link.href;
     image.alt = thumbnail.alt;
-    image.classList.toggle('image-viewer-rotated', Boolean(thumbnail.closest('.upright-photo')));
+    image.classList.toggle('image-viewer-rotated', Boolean(thumbnail.closest('.upright-photo, .portrait-turn')));
     counter.textContent = `${index + 1} / ${photos.length}`;
     previous.hidden = next.hidden = photos.length < 2;
   }
