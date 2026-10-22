@@ -79,3 +79,4 @@ Speaker testing clarification: user performed listening tests and frequency test
 Speaker troubleshooting: user reported that testing revealed rattling traced to a loose connection. Connection type and repair outcome are not yet specified.
 Speaker follow-up: user confirmed the loose connection was a wire connection. Repair outcome remains unspecified.
 Speaker repair outcome confirmed by user: securing the loose wire connection eliminated the rattle when tested again.
+FIRE1 clarification: user confirmed nitinol frame material and that frame parts caught on each other as the sensor came out of the catheter. Supersedes prior titanium-alloy wording. Specific investigation methods and outcomes remain to be clarified.
