@@ -81,3 +81,4 @@ Speaker follow-up: user confirmed the loose connection was a wire connection. Re
 Speaker repair outcome confirmed by user: securing the loose wire connection eliminated the rattle when tested again.
 FIRE1 clarification: user confirmed nitinol frame material and that frame parts caught on each other as the sensor came out of the catheter. Supersedes prior titanium-alloy wording. Specific investigation methods and outcomes remain to be clarified.
 FIRE1 personal contribution: user ran deployment tests and tried changes to sensor loading and release to prevent the nitinol frame catching on itself during deployment. Successful outcome and repeatability not yet confirmed.
+FIRE1 outcome: user confirmed testing was still ongoing at placement end. Work involved tradeoffs between engineering performance, physician deployment workflow, and fluoroscopic visibility. Do not claim a validated solution, clinical testing by the user, or operation of fluoroscopy equipment.
