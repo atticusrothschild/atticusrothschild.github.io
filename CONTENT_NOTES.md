@@ -77,3 +77,4 @@ Speaker fabrication challenge: user identified closely spaced kerf cuts for the 
 Speaker follow-up: user confirmed calculations determined kerf spacing and cut depth; numerical values and calculation method remain unspecified.
 Speaker testing clarification: user performed listening tests and frequency tests with a frequency generator. This supersedes the broad acoustic measurement/performance tuning wording; microphone measurements and quantitative response data are not confirmed.
 Speaker troubleshooting: user reported that testing revealed rattling traced to a loose connection. Connection type and repair outcome are not yet specified.
+Speaker follow-up: user confirmed the loose connection was a wire connection. Repair outcome remains unspecified.
