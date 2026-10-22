@@ -72,3 +72,4 @@ Added three user-supplied Kong photos: microscope monitor, printed sample, and s
 Rapyuta media: user supplied four original photographs of ASRS hardware, operator display, and demonstration setup, plus IMG_1844.mp4 described as their line-following troubleshooting. Added contextual images and a manually played video; no additional performance or root-cause claims.
 
 Speaker project: four original photographs supplied by the user show cabinet assembly, driver installation, crossover wiring/acoustic lining, and the completed loudspeaker. Added to Other work with descriptive captions; no new acoustic performance claims.
+Speaker design clarification: user adapted an existing design into their own build; do not claim an entirely original cabinet or crossover design. Specific modifications remain to be clarified.
