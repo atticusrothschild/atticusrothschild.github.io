@@ -58,3 +58,5 @@ figcaption{font-size:12px}footer{padding-top:18px;padding-bottom:22px}
 .text-links a.download-button{display:inline-block;padding:9px 15px;border:1px solid #355944;border-radius:3px;text-decoration:none;color:#355944}.text-links a.download-button:hover{background:#f0f4f0}
 
 figure a:has(img){cursor:zoom-in}
+
+figure a:has(img){display:block}.upright-photo>a{position:absolute;inset:0;display:block}.portrait-link{display:block;cursor:zoom-in}@media(max-width:760px){.portrait-link{grid-row:1;width:160px}}
