@@ -88,3 +88,4 @@ figure a:has(img){display:block}.upright-photo>a{position:absolute;inset:0;displ
 .portrait-turn{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden}.portrait-turn>a{position:absolute;inset:0}.portrait-turn img{position:absolute;left:50%;top:50%;width:133.333333%;max-width:none;height:auto;max-height:none;transform:translate(-50%,-50%) rotate(90deg)}
 
 .speaker-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}.speaker-photos figure{margin:0}@media(max-width:480px){.speaker-photos{grid-template-columns:1fr}}
+.fire1-product{max-width:400px}.fire1-product img{width:100%;height:auto}.fire1-product figcaption a{text-decoration:underline;text-underline-offset:2px}
