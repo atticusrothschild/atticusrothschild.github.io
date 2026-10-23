@@ -88,3 +88,4 @@ User identified Kong video 1 as PDMS insulating-layer printing, video 2 as PDMS 
 
 Lee Gagne media: user supplied IMG_0779.JPG (engine suspended from a hoist) and IMG_1079.MOV (workshop footage). Added original photo and web-encoded video with neutral captions, without assuming engine model or identifying people.
 October 23, 2026: User clarified Kong status as Manuscript in preparation, superseding Publication pending. Added credited Rice Racing team photos from official site: IMG_5178.jpeg (engine teardown led by James Clubley) and OEDK Showcase.jpeg (RR01 initial design presentation). Team context, no claim Atticus led or attended these pictured events.
+User supplied powertrain assembly, chassis packaging, and cooling CAD screenshots. Added with descriptive captions; removed showcase photo, visible courtesy line, and paper fuel sketch from FSAE page. Official engine-session photo source remains recorded above.
