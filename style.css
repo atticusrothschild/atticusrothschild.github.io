@@ -99,3 +99,4 @@ figure a:has(img){display:block}.upright-photo>a{position:absolute;inset:0;displ
 .media-grid video{aspect-ratio:4/3;object-fit:contain;background:#171717}
 @media(max-width:540px){.demonstration-media{gap:10px}.demonstration-media figcaption{font-size:11px}}
 @media(max-width:480px){.project-photos:not(.demonstration-media),.media-grid{grid-template-columns:1fr}.demonstration-media{max-width:none}}
+.racing-team-photos{max-width:650px}.racing-team-photos img{aspect-ratio:4/3;object-fit:cover}
